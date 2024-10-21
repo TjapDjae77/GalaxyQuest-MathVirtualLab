@@ -17,10 +17,10 @@
                     <img src="Media/Images/us_flag.png" alt="US Flag" class="flag">
                 </button>
                 <div class="dropdown-content">
-                    <a href="#" onclick="setLanguage('en')">
+                    <a data-lang-switch="en">
                         <img src="Media/Images/us_flag.png" alt="US Flag" class="flag"> English
                     </a>
-                    <a href="#" onclick="setLanguage('id')">
+                    <a data-lang-switch="id">
                         <img src="Media/Images/id_flag.png" alt="ID Flag" class="flag"> Bahasa
                     </a>
                 </div>
@@ -32,8 +32,8 @@
             <div class="hero-text">
                 <h2 data-lang="en">Explore the Universe of Calculus!</h2>
                 <h2 data-lang="id" style="display: none;">Jelajahi Alam Semesta Kalkulus!</h2>
-                <a href="#login" data-lang="en"><button class="cta-btn">Get Started</button></a>
-                <a href="#login" data-lang="id" style="display: none;"><button class="cta-btn">Mulai</button></a>
+                <a href="#login"><button class="cta-btn" data-lang="en">Get Started</button></a>
+                <a href="#login"><button class="cta-btn" data-lang="id">Mulai</button></a>
             </div>
             <div class="hero-image">
                 <img src="Media/Images/rocket.png" alt="Rocket">
@@ -41,7 +41,7 @@
         </section>
         <section>
             <p data-lang="en">Embark on an exciting adventure to solve calculus problems across different planets and galaxies!</p>
-            <p data-lang="id" style="display: none;">Bergabunglah dalam petualangan seru untuk menyelesaikan soal-soal kalkulus di berbagai planet dan galaksi!</p>
+            <p data-lang="id">Bergabunglah dalam petualangan seru untuk menyelesaikan soal-soal kalkulus di berbagai planet dan galaksi!</p>
         </section>
     </main>
     <script src="script.js"></script>

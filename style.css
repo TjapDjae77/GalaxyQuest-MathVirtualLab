@@ -12,6 +12,18 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
+    height: 100%;
+    background-color: var(--color-primary);
+    color: white;
+}
+
+/* Transisi Perubahan Bahasa */
+[data-lang] {
+    transition: opacity 0.3s ease;
+}
+
+[data-lang][style*="display: none"] {
+    opacity: 0;
 }
 
 header {
@@ -26,10 +38,9 @@ nav {
     align-items: center;
 }
 
-.language-switch button {
-    background-color: transparent;
-    border: none;
-    color: white;
+.logo h1 {
+    margin: 0;
+    font-size: 1.8rem;
 }
 
 .dropdown {
@@ -38,26 +49,19 @@ nav {
 }
 
 .dropbtn {
-    background-color: #1D161E;
-    color: white;
+    background-color: transparent;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 20px;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #333;
+    background-color: var(--color-background-dark);
     min-width: 160px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 5px;
-}
-
-.dropdown-content img {
-    margin-right: 6px;
 }
 
 .dropdown-content a {
@@ -65,11 +69,10 @@ nav {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    font-size: 1rem;
 }
 
 .dropdown-content a:hover {
-    background-color: #555;
+    background-color: var(--color-secondary);
 }
 
 .dropdown:hover .dropdown-content {
@@ -81,35 +84,34 @@ nav {
     height: 21px;
 }
 
-
-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Each section takes full viewport height */
-    padding: 20px;
-    text-align: center;
-}
-
+/* Hero Section */
 .hero {
-    padding: 50px 20px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     background: linear-gradient(to bottom, #000046, #1CB5E0);
-    color: white;
 }
 
 .hero-text {
     max-width: 500px;
+    text-align: left;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 .cta-btn {
     background-color: var(--color-primary);
     color: white;
-    padding: 10px 20px;
+    padding: 15px 30px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1.2rem;
     margin-top: 20px;
-    text-decoration: none;
 }
 
 .cta-btn:hover {
@@ -117,5 +119,17 @@ section {
 }
 
 .hero-image img {
-    max-width: 100%;
+    max-width: 400px;
+}
+
+/* Section */
+
+section {
+    padding: 40px 20px;
+    background-color: var(--color-secondary);
+    text-align: center;
+}
+
+p {
+    font-size: 1.2rem;
 }
