@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Quest - Calculus Virtual Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Calculus Virtual Lab</h1>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" id="language-btn">
+                    <img src="Media/Images/us_flag.png" alt="US Flag" class="flag">
+                </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="setLanguage('en')">
+                        <img src="Media/Images/us_flag.png" alt="US Flag" class="flag"> English
+                    </a>
+                    <a href="#" onclick="setLanguage('id')">
+                        <img src="Media/Images/id_flag.png" alt="ID Flag" class="flag"> Bahasa
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-text">
+            <h2 data-lang="en">Explore the Universe of Calculus!</h2>
+            <h2 data-lang="id" style="display: none;">Jelajahi Alam Semesta Kalkulus!</h2>
+            <p data-lang="en">Embark on an exciting adventure to solve calculus problems across different planets and galaxies!</p>
+            <p data-lang="id" style="display: none;">Bergabunglah dalam petualangan seru untuk menyelesaikan soal-soal kalkulus di berbagai planet dan galaksi!</p>
+            <a href="#login" class="cta-btn" data-lang="en">Get Started</a>
+            <a href="#login" class="cta-btn" data-lang="id" style="display: none;">Mulai</a>
+        </div>
+        <div class="hero-image">
+
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
