@@ -60,6 +60,14 @@ document.addEventListener("DOMContentLoaded", () => {
             logo.style.textAlign = "center";
         }
     });
+
+    document.querySelector(".cta-btn").addEventListener("click", function() {
+        window.location.href = "login.html";
+    });
+    
+    document.querySelector(".fixed-btn").addEventListener("click", function() {
+        window.location.href = "login.html";
+    });
 });
 
 
