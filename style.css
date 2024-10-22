@@ -187,27 +187,65 @@ p {
 
 /* Footer */
 footer {
-    background-color: var(--color-primary); /* Dark blue background */
-    height: 50vh;
+    background-color: var(--color-background-darker);
     width: 100%;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 40px;
     font-size: 1.2rem;
 }
 
-footer p {
-    margin: 0;
-    margin-top: 50px;
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.about, .contact {
+    flex: 1;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.personal-logo img {
+    width: 80px;
+    border-radius: 50%;
 }
 
 footer a {
-    color: var(--color-highlight);
+    color: white;
     text-decoration: none;
 }
 
 footer a:hover {
     text-decoration: underline;
+}
+
+.social-links li {
+    list-style-type: none;
+    display: inline;
+    margin: 0 10px;
+}
+
+.social-links li img {
+    width: 40px;
+}
+
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background: white;
+    margin: 20px 0;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 10px 0;
+    font-size: 0.9rem;
 }
 
 /* Style for when "Get Started" becomes visible in the navbar */
@@ -279,7 +317,7 @@ footer a:hover {
     }
 
     .web-description h3 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         max-width: 90%;
         text-align: center;
     }
@@ -305,6 +343,7 @@ footer a:hover {
         border-radius: 5px;
         cursor: pointer;
         text-decoration: none;
+        font-size: 0.8rem;
     }
     
     .fixed-btn.show:hover {
