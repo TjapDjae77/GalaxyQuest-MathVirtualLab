@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Level 1</title>
+    <title>Level 1 - Build Your Rocket</title>
+    <link rel="stylesheet" href="level1style.css">
 </head>
 <body>
+    <header>
+        <h1>Level 1: Build Your Rocket</h1>
+    </header>
     
+    <main>
+        <div class="materials-container">
+            <h2>Select Materials</h2>
+            <div class="material" draggable="true" id="material-iron">Iron</div>
+            <div class="material" draggable="true" id="material-glass">Glass</div>
+            <div class="material" draggable="true" id="material-carbon">Carbon</div>
+        </div>
+
+        <div class="machine-container">
+            <h2>Processing Machine</h2>
+            <canvas id="functionCanvas"></canvas>
+            <p>Insert the function to process the material:</p>
+            <input type="text" id="functionInput" placeholder="e.g., 2*x + 3">
+            <button id="processBtn">Process Material</button>
+        </div>
+
+        <div class="output-container">
+            <h2>Processed Component</h2>
+            <div id="outputArea">Drop the processed material here!</div>
+        </div>
+    </main>
+
+    <script src="level1script.js"></script>
 </body>
 </html>

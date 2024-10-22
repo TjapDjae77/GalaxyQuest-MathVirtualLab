@@ -1,0 +1,83 @@
+/* Basic styles for the game layout */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1CB5E0;
+    color: #fff;
+    text-align: center;
+}
+
+header {
+    background-color: #000046;
+    padding: 20px;
+}
+
+h1 {
+    color: #DC1F84;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.materials-container, .machine-container, .output-container {
+    width: 30%;
+    padding: 20px;
+    background-color: #6D2476;
+    border-radius: 10px;
+}
+
+.material {
+    background-color: #DC1F84;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: grab;
+}
+
+.machine-container {
+    background-color: #1D161E;
+}
+
+#functionCanvas {
+    width: 100%;
+    height: 150px;
+    background-color: #D8D8F6;
+    border: 2px solid #fff;
+    margin-bottom: 10px;
+}
+
+#outputArea {
+    background-color: #6D2476;
+    height: 150px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #fff;
+    color: #fff;
+}
+
+button {
+    background-color: #DC1F84;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #E85CA7;
+}
+
+input {
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    width: 80%;
+}
