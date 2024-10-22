@@ -8,13 +8,21 @@
     --color-light: #D8D8F6; /* Light Lavender */
 }
 
-body, html {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
     font-family: 'Arial', sans-serif;
-    height: 100%;
-    background-color: var(--color-primary);
-    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100%;
+    text-align: center;
 }
 
 header {
@@ -35,7 +43,6 @@ nav {
 }
 
 .logo h1 {
-    margin: 0;
     margin-left: 10px;
     font-size: 1.8rem;
 }
@@ -91,23 +98,32 @@ nav {
     height: 21px;
 }
 
+main {
+    min-width: 100%;
+}
 /* Hero Section */
 .hero {
-    padding: 50px 20px;
     background: linear-gradient(to bottom, #000046, #1CB5E0);
-    color: white;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-text {
-    max-width: 500px;
-    text-align: left;
+    max-width: 200px;
+    text-align: center;
+    color: white;
 }
 
 .hero h2 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-image {
+    width: 200px;
+    height: auto;
     margin-bottom: 20px;
 }
 
@@ -169,6 +185,7 @@ p {
 footer {
     background-color: var(--color-primary); /* Dark blue background */
     height: 50vh;
+    width: 100%;
     color: white;
     text-align: center;
     padding: 20px;
@@ -213,6 +230,15 @@ footer a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .dropbtn {
+        display: none; /* Hilangkan tombol bahasa pada mobile */
+    }
+
+    .logo {
+        text-align: center;
+        width: 100%;
+    }
+
     .hero {
         flex-direction: column;
         text-align: center;
@@ -225,6 +251,7 @@ footer a:hover {
 
     .hero-image {
         order: 1;
+        width: 350px;
         margin-bottom: 20px;
     }
 
@@ -235,6 +262,7 @@ footer a:hover {
     .cta-btn {
         font-size: 1rem;
         padding: 8px 16px;
+        width: 80%;
     }
 
     .web-description {
@@ -249,5 +277,26 @@ footer a:hover {
     .web-description img {
         max-width: 80%;
         margin-top: 20px;
+    }
+
+    .fixed-btn {
+        display: none;
+    }
+    
+    .fixed-btn.show {
+        display: inline-block;
+        width: 20%;
+        background-color: var(--color-primary);
+        color: white;
+        margin-right: 20px;
+        padding: 10px 5px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+    .fixed-btn.show:hover {
+        background-color: #E85CA7;
     }
 }

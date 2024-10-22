@@ -24,6 +24,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Toggle the fixed button when "Get Started" or "Mulai" goes off screen
     window.addEventListener("scroll", () => {
+        let windowWidth = window.innerWidth;
+        const dropdown_language = document.querySelector(".dropdown");
+        if (windowWidth <= 768) {
+            dropdown_language.style.display = "none";
+        }
+        else {
+            dropdown_language.style.display = "";
+        }
         const ctaBtnPositionEn = document.querySelector(".cta-btn[data-lang='en']").getBoundingClientRect().top;
         const ctaBtnPositionId = document.querySelector(".cta-btn[data-lang='id']").getBoundingClientRect().top;
         const currentLanguage = document.querySelector("[data-lang='en']").style.display === "" ? 'en' : 'id';
