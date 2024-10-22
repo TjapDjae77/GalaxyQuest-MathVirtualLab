@@ -10,7 +10,7 @@
     <header>
         <nav>
             <div class="logo">
-                <h1>Calculab</h1>
+                <h1 class="logo-title">Calculab</h1>
             </div>
             <div class="dropdown">
                 <button class="dropbtn" id="language-btn">
@@ -18,7 +18,7 @@
                 </button>
                 <div class="dropdown-content">
                     <a data-lang-switch="en">
-                        <img src="Media/Images/us_flag.png" alt="US Flag" class="flag"> English
+                        <img src="Media/Images/us_flag.png" alt="US Flag" class="flag"> <span id="enSwitch">English</span>
                     </a>
                     <a data-lang-switch="id">
                         <img src="Media/Images/id_flag.png" alt="ID Flag" class="flag"> Bahasa
@@ -40,12 +40,24 @@
             </div>
         </section>
         <section class="web-description">
+            <img src="Media/Images/Astronaut.png" alt="Astronaut">
             <h3 data-lang="en">Embark on an exciting adventure to solve calculus problems across different planets and galaxies!</p>
             <h3 data-lang="id" style="display: none;">Bergabunglah dalam petualangan seru untuk menyelesaikan soal-soal kalkulus di berbagai planet dan galaksi!</p>
+            
         </section>
     </main>
     <footer>
-        <p>Created by Rajendra Farras Rayhan</p>
+        <div class="footer-content">
+            <p>Created by Rajendra Farras Rayhan</p>
+            <ul class="social-links">
+                <li><a href="https://twitter.com/yourprofile" target="_blank">Twitter</a></li>
+                <li><a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/yourprofile" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 All rights reserved.</p>
+        </div>
     </footer>
     <script src="script.js"></script>
 </body>

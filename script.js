@@ -22,10 +22,22 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     document.querySelector("nav").appendChild(fixedBtn);
 
+    window.addEventListener("resize", function() {
+        let width = window.innerWidth;
+        const dropdown_language = document.querySelector(".dropdown");
+        if (width <= 768) {
+            dropdown_language.style.display = "none";
+        }
+        else {
+            dropdown_language.style.display = "";
+        }
+    });
+
     // Toggle the fixed button when "Get Started" or "Mulai" goes off screen
     window.addEventListener("scroll", () => {
         let windowWidth = window.innerWidth;
         const dropdown_language = document.querySelector(".dropdown");
+        const logo = document.querySelector(".logo");
         if (windowWidth <= 768) {
             dropdown_language.style.display = "none";
         }
@@ -41,12 +53,16 @@ document.addEventListener("DOMContentLoaded", () => {
         if (ctaBtnPositionEn < 0 || ctaBtnPositionId < 0) {
             fixedBtn.classList.add("show");
             languageBtn.style.display = "none";
+            logo.style.textAlign = "left";
         } else {
             fixedBtn.classList.remove("show");
             languageBtn.style.display = "inline-block";
+            logo.style.textAlign = "center";
         }
     });
 });
+
+
 
 function setLanguage(lang) {
     const elements = document.querySelectorAll("[data-lang]");

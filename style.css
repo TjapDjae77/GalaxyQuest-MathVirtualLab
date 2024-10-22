@@ -44,7 +44,7 @@ nav {
 
 .logo h1 {
     margin-left: 10px;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
 }
 
 .dropdown {
@@ -94,8 +94,8 @@ nav {
 }
 
 .flag {
-    width: 30px;
-    height: 21px;
+    width: 40px;
+    height: 28px;
 }
 
 main {
@@ -106,23 +106,24 @@ main {
     background: linear-gradient(to bottom, #000046, #1CB5E0);
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 .hero-text {
-    max-width: 200px;
+    max-width: 280px;
     text-align: center;
     color: white;
 }
 
 .hero h2 {
-    font-size: 1.5rem;
+    font-size: 3rem;
     margin-bottom: 20px;
+    text-align: left;
 }
 
 .hero-image {
-    width: 200px;
+    width: 300px;
     height: auto;
     margin-bottom: 20px;
 }
@@ -136,6 +137,8 @@ main {
     cursor: pointer;
     margin-top: 20px;
     text-decoration: none;
+    width: 240px;
+    font-size: 1.3rem;
 }
 
 .cta-btn:hover {
@@ -174,6 +177,7 @@ p {
 .web-description h3 {
     font-size: 1.5rem;
     max-width: 50%;
+    color: white;
 }
 
 .web-description img {
@@ -216,7 +220,8 @@ footer a:hover {
     background-color: var(--color-primary);
     color: white;
     margin-right: 20px;
-    padding: 10px 20px;
+    margin-bottom: 5px;
+    padding: 10px 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -239,6 +244,10 @@ footer a:hover {
         width: 100%;
     }
 
+    .logo h1 {
+        font-size: 1.8rem;
+    }
+
     .hero {
         flex-direction: column;
         text-align: center;
@@ -251,8 +260,8 @@ footer a:hover {
 
     .hero-image {
         order: 1;
-        width: 350px;
-        margin-bottom: 20px;
+        width: 300px;
+        margin-bottom: -160px;
     }
 
     .hero h2 {
@@ -272,11 +281,13 @@ footer a:hover {
     .web-description h3 {
         font-size: 1.2rem;
         max-width: 90%;
+        text-align: center;
     }
 
     .web-description img {
-        max-width: 80%;
+        max-width: 60%;
         margin-top: 20px;
+        margin-bottom: 60px;
     }
 
     .fixed-btn {
