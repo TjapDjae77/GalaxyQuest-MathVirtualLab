@@ -1,0 +1,99 @@
+/* Mengacu pada color palette yang Anda miliki */
+:root {
+    --color-primary: #DC1F84; /* Pink */
+    --color-secondary: #6D2476; /* Purple */
+    --color-background-dark: #1D161E; /* Dark Background */
+    --color-background-darker: #000046; /* Darker Background */
+    --color-highlight: #1CB5E0; /* Cyan/Blue */
+    --color-light: #D8D8F6; /* Light Lavender */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-background-darker);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login-box {
+    background-color: var(--color-primary);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+}
+
+.login-box h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-background-dark);
+    border-radius: 4px;
+    background-color: var(--color-light);
+    color: var(--input-text-color);
+    font-size: 1rem;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--color-highlight);
+    border: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: var(--color-light);
+}
+
+.signup-text {
+    margin-top: 20px;
+    color: white;
+}
+
+.signup-text a {
+    color: var(--color-highlight);
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    color: var(--color-light);
+}
