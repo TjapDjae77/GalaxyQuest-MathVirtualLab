@@ -10,17 +10,17 @@
     <header>
         <nav>
             <div class="logo">
-                <h1>Calculus Virtual Lab</h1>
+                <h1 class="logo-title">Calculab</h1>
             </div>
             <div class="dropdown">
                 <button class="dropbtn" id="language-btn">
                     <img src="Media/Images/us_flag.png" alt="US Flag" class="flag">
                 </button>
                 <div class="dropdown-content">
-                    <a href="#" onclick="setLanguage('en')">
-                        <img src="Media/Images/us_flag.png" alt="US Flag" class="flag"> English
+                    <a data-lang-switch="en">
+                        <img src="Media/Images/us_flag.png" alt="US Flag" class="flag"> <span id="enSwitch">English</span>
                     </a>
-                    <a href="#" onclick="setLanguage('id')">
+                    <a data-lang-switch="id">
                         <img src="Media/Images/id_flag.png" alt="ID Flag" class="flag"> Bahasa
                     </a>
                 </div>
@@ -61,10 +61,21 @@
             </div>
             
         </div>
-        <div class="hero-image">
-
+    
+        <!-- Garis Lurus -->
+        <hr class="footer-divider">
+    
+        <div class="footer-bottom">
+            <ul class="social-links">
+                <li><a href="https://x.com/TjapDjae77" target="_blank"><img src="Media/Images/Twitter Circled.png" alt="Twitter Logo"></a></li>
+                <li><a href="https://www.instagram.com/farras_rayhan/" target="_blank"><img src="Media/Images/Instagram Circle.png" alt="Instagram Logo"></a></li>
+                <li><a href="https://www.youtube.com/@TjapDjae77" target="_blank"><img src="Media/Images/YouTube.png" alt="YouTube Logo"></a></li>
+                <li><a href="https://github.com/TjapDjae77" target="_blank"><img src="Media/Images/GitHub.png" alt="GitHub Logo"></a></li>
+            </ul>
+            <p>&copy; 2024 All rights reserved. Designed by Rajendra Farras Rayhan.</p>
         </div>
-    </section>
+    </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>
