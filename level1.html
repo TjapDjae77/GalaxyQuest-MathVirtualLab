@@ -3,35 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Level 1 - Build Your Rocket</title>
+    <title>Rocket Assembly - Level 1</title>
     <link rel="stylesheet" href="level1style.css">
 </head>
 <body>
+    <!-- Navbar -->
     <header>
-        <h1>Level 1: Build Your Rocket</h1>
+        <button class="back-btn" onclick="history.back()">← Back</button>
+        <h1>Rocket Assembly - Level 1</h1>
     </header>
-    
-    <main>
-        <div class="materials-container">
-            <h2>Select Materials</h2>
-            <div class="material" draggable="true" id="material-iron">Iron</div>
-            <div class="material" draggable="true" id="material-glass">Glass</div>
-            <div class="material" draggable="true" id="material-carbon">Carbon</div>
+
+    <!-- Main Container -->
+    <div class="game-container">
+        <!-- Input Container -->
+        <div class="input-container">
+            <h2>Input Container</h2>
+            <div id="input-area" class="drop-area">
+                Drag materials here
+            </div>
         </div>
 
-        <div class="machine-container">
+        <!-- Processing Machine -->
+        <div class="processing-machine">
             <h2>Processing Machine</h2>
-            <canvas id="functionCanvas"></canvas>
-            <p>Insert the function to process the material:</p>
-            <input type="text" id="functionInput" placeholder="e.g., 2*x + 3">
-            <button id="processBtn">Process Material</button>
+            <p id="function-problem">Solve: g(f(x)) = 4x - 3</p>
+            <p>g(x) = 2x - 3</p>
+            <button id="process-btn" onclick="processFunction()">Play</button>
+            <p id="attempts-left">Attempts Left: 3</p>
         </div>
 
+        <!-- Output Container -->
         <div class="output-container">
-            <h2>Processed Component</h2>
-            <div id="outputArea">Drop the processed material here!</div>
+            <h2>Output Container</h2>
+            <p>Target: g(f(x))</p>
+            <p id="target-output">4x - 3</p>
+            <div id="output-result">Output: <span id="output-value">None</span></div>
         </div>
-    </main>
+    </div>
+
+    <!-- Material Container -->
+    <div class="material-container">
+        <h3>Material Container</h3>
+        <div class="material" draggable="true" ondragstart="drag(event)" id="iron"><img src="Media/Images/anvil.png" alt="anvil"></div>
+        <div class="material" draggable="true" ondragstart="drag(event)" id="glass">Glass (y)</div>
+        <div class="material" draggable="true" ondragstart="drag(event)" id="carbon">Carbon (z)</div>
+    </div>
 
     <script src="level1script.js"></script>
 </body>
