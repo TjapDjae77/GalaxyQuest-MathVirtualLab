@@ -1,53 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rocket Assembly - Level 1</title>
+    <title>Lab Virtual Kalkulus - Komposisi Fungsi</title>
     <link rel="stylesheet" href="level1style.css">
 </head>
 <body>
-    <!-- Navbar -->
     <header>
-        <button class="back-btn" onclick="history.back()">← Back</button>
-        <h1>Rocket Assembly - Level 1</h1>
+        <h1>Calculab - Level 1</h1>
+        <p>Fungsi Komposisi</p>
     </header>
 
-    <!-- Main Container -->
-    <div class="game-container">
-        <!-- Input Container -->
-        <div class="input-container">
-            <h2>Input Container</h2>
-            <div id="input-area" class="drop-area">
-                Drag materials here
+    <main>
+        <section class="game-area">
+            <div class="material-input">
+                <h2>Material Input</h2>
+                <p>f(x) = 3x - 2</p>
+                <div id="input-box" class="drop-zone">
+                    <p id="placeholder-text">Masukkan bahan baku di sini</p>
+                </div>
             </div>
-        </div>
 
-        <!-- Processing Machine -->
-        <div class="processing-machine">
-            <h2>Processing Machine</h2>
-            <p id="function-problem">Solve: g(f(x)) = 4x - 3</p>
-            <p>g(x) = 2x - 3</p>
-            <button id="process-btn" onclick="processFunction()">Play</button>
-            <p id="attempts-left">Attempts Left: 3</p>
-        </div>
+            <div class="function-machine">
+                <h2>Mesin Fungsi</h2>
+                <img src="Media/Images/recipe.png" alt="Recipe">
+                <p>g(x) = <input type="text" id="gx-input" placeholder="???"></p>
+                <button id="process-btn">Jalankan</button>
+            </div>
 
-        <!-- Output Container -->
-        <div class="output-container">
-            <h2>Output Container</h2>
-            <p>Target: g(f(x))</p>
-            <p id="target-output">4x - 3</p>
-            <div id="output-result">Output: <span id="output-value">None</span></div>
-        </div>
-    </div>
+            <div class="output-material">
+                <h2>Output Material</h2>
+                <div id="output-box">
+                    <p>g(f(x)) = 6x - 7</p>
+                    <img src="Media/Images/NoseCone.png" alt="Nose Cone" class="output-pic">
+                </div>
+            </div>
+        </section>
 
-    <!-- Material Container -->
-    <div class="material-container">
-        <h3>Material Container</h3>
-        <div class="material" draggable="true" ondragstart="drag(event)" id="iron"><img src="Media/Images/anvil.png" alt="anvil"></div>
-        <div class="material" draggable="true" ondragstart="drag(event)" id="glass">Glass (y)</div>
-        <div class="material" draggable="true" ondragstart="drag(event)" id="carbon">Carbon (z)</div>
-    </div>
+        <section class="materials-list">
+            <h2>List Bahan Baku</h2>
+            <div class="material-container">
+                <div class="material" draggable="true" data-material="Aluminium">
+                    <img src="Media/Images/aluminium.png" alt="Aluminium" class="material-pic">
+                </div>
+                <div class="material" draggable="true" data-material="Fiberglass">
+                    <img src="Media/Images/fiberglass.png" alt="Fiberglass" class="material-pic">
+                </div>
+                <div class="material" draggable="true" data-material="Iron">
+                    <img src="Media/Images/anvil.png" alt="Iron" class="material-pic">
+                </div>
+                <div class="material" draggable="true" data-material="Glass">
+                    <img src="Media/Images/glass.png" alt="Glass" class="material-pic">
+                </div>
+            </div>
+        </section>
+    </main>
 
     <script src="level1script.js"></script>
 </body>
