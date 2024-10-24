@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab Virtual Kalkulus - Komposisi Fungsi</title>
     <link rel="stylesheet" href="level1style.css">
 </head>
 <body>
+    <button id="back-btn" onclick="window.location.href='index.html'">Back</button>
     <header>
         <h1>Calculab - Level 1</h1>
         <p>Fungsi Komposisi</p>
+        <div id="progress-container">
+            <div id="lives">Nyawa: ❤️❤️❤️</div>
+            <div id="progress-bar">
+                <div id="progress" style="width: 0%;"></div>
+            </div>
+        </div>
     </header>
 
     <main>
         <section class="game-area">
+            <!-- Material Input Section -->
             <div class="material-input">
                 <h2>Material Input</h2>
-                <p>f(x) = 3x - 2</p>
+                <p id="f-function">f(x) = 3x - 2</p>
                 <div id="input-box" class="drop-zone">
                     <p id="placeholder-text">Masukkan bahan baku di sini</p>
                 </div>
             </div>
 
+            <!-- Function Machine Section -->
             <div class="function-machine">
                 <h2>Mesin Fungsi</h2>
                 <img src="Media/Images/recipe.png" alt="Recipe">
@@ -29,15 +38,17 @@
                 <button id="process-btn">Jalankan</button>
             </div>
 
+            <!-- Output Section -->
             <div class="output-material">
                 <h2>Output Material</h2>
+                <p id="g-function">g(f(x)) = 6x - 7</p>
                 <div id="output-box">
-                    <p>g(f(x)) = 6x - 7</p>
-                    <img src="Media/Images/NoseCone.png" alt="Nose Cone" class="output-pic">
+                    <img src="Media/Images/NoseCone.png" alt="Output" class="output-pic" id="output-pic">
                 </div>
             </div>
         </section>
 
+        <!-- List of materials -->
         <section class="materials-list">
             <h2>List Bahan Baku</h2>
             <div class="material-container">

@@ -20,7 +20,7 @@ html, body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, var(--darker-bg), var(--cyan));
     color: var(--light-lavender);
-    overflow: hidden;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 header {
@@ -36,15 +36,16 @@ main {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    height: calc(100vh - 80px); /* Adjust for header height */
+    height: calc(100vh - 190px); /* Adjust for header height */
 }
 
 .game-area {
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 100%;
     margin: 20px 0;
-    height: 70%;
+    height: auto;
+    gap: 20px; /* Add space between sections */
 }
 
 .material-input, .function-machine, .output-material {
@@ -55,10 +56,17 @@ main {
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .function-machine img {
     width: 100%;
+    height: auto; /* Maintain the original aspect ratio */
+    object-fit: contain; /* Ensure the image doesn't get stretched */
+    max-height: 200px; /* Optional: Set a max height */
 }
 
 .drop-zone {
@@ -70,6 +78,13 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     min-height: 100px;
+}
+
+#f-function {
+    font-weight: bold;
+    font-size: 1.5rem;
+    background: var(--dark-bg);
+    padding: 15px 5px;
 }
 
 #placeholder-text {
@@ -132,23 +147,35 @@ main {
     align-items: center;
 }
 
+#g-function {
+    background: var(--dark-bg);
+    margin-top: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: var(--dark-bg);
+    padding: 15px 5px;
+}
+
 .output-pic {
     width: 70px;
     margin-top: 2rem;
 }
 
 .materials-list {
-    width: 80%;
+    width: 100%;
     margin: 20px 0;
     padding: 20px;
     background-color: var(--purple);
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .material-container {
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap */
 }
 
 .material {
@@ -169,4 +196,124 @@ main {
 
 .material:hover {
     background-color: var(--cyan);
+}
+
+#lives {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#progress-bar {
+    width: 80%;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 5px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+}
+
+#progress {
+    height: 100%;
+    background-color: #4caf50;
+    width: 0;
+}
+
+#back-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--darker-bg);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+#back-btn:hover {
+    background-color: var(--cyan);
+    color: black;
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    #back-btn {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+    
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+        margin: 0; /* Smaller font */
+    }
+
+    .progress-container {
+        
+        width: 1
+    }
+
+    #lives {
+        font-size: 1.5rem;
+        margin-left: 10px;
+    }
+
+    #progress-bar {
+        width: 60px;
+        height: 15px;
+        margin: 0;
+    }
+
+    main {
+        display: grid;
+    }
+
+    .game-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .output-material {
+        order: -1; /* Move output-material to the top */
+        width: 100%; /* Full width for better display */
+    }
+
+    .material-input {
+        order: 1; /* Move material-input to the bottom */
+        width: 100%; /* Full width for better display */
+    }
+
+    .function-machine {
+        width: 100%; /* Full width for better display */
+    }
+
+    #progress-bar {
+        width: 90%; /* Full width progress bar on mobile */
+    }
+
+    .materials-list {
+        width: 90%; /* Full width materials list */
+        padding: 10px;
+    }
+
+    .material-container {
+        justify-content: space-around; /* Spread materials more evenly on mobile */
+    }
 }
